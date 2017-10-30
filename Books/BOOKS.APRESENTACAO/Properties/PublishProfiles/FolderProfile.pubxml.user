@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\tiago.santos\Documents\Visual Studio 2017\Publish\Book</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/Login.aspx">
+      <publishTime>05/13/2015 14:06:46</publishTime>
+    </File>
+    <File Include="Account/Manage.aspx">
+      <publishTime>05/13/2015 14:06:46</publishTime>
+    </File>
+    <File Include="Account/OpenAuthProviders.ascx">
+      <publishTime>05/13/2015 14:06:48</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>05/13/2015 14:06:48</publishTime>
+    </File>
+    <File Include="Account/RegisterExternalLogin.aspx">
+      <publishTime>05/13/2015 14:06:50</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>05/13/2015 14:06:52</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.dll">
+      <publishTime>05/13/2015 14:08:21</publishTime>
+    </File>
+    <File Include="bin/AspNet.ScriptManager.jQuery.UI.Combined.dll">
+      <publishTime>05/13/2015 14:08:23</publishTime>
+    </File>
+    <File Include="bin/BOOKS.APRESENTACAO.dll">
+      <publishTime>10/27/2017 17:00:33</publishTime>
+    </File>
+    <File Include="bin/BOOKS.APRESENTACAO.pdb">
+      <publishTime>10/27/2017 17:00:33</publishTime>
+    </File>
+    <File Include="bin/BOOKS.NUCLEO.dll">
+      <publishTime>10/27/2017 16:16:19</publishTime>
+    </File>
+    <File Include="bin/BOOKS.NUCLEO.pdb">
+      <publishTime>10/27/2017 16:16:19</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>05/13/2015 14:08:25</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>05/13/2015 14:08:28</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>05/13/2015 14:08:30</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>05/13/2015 14:08:33</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>05/13/2015 14:08:36</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>05/13/2015 14:08:38</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/13/2015 14:08:43</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/13/2015 14:08:43</publishTime>
+    </File>
+    <File Include="bin/FluentNHibernate.dll">
+      <publishTime>05/13/2015 14:08:17</publishTime>
+    </File>
+    <File Include="bin/Iesi.Collections.dll">
+      <publishTime>05/13/2015 14:08:17</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>05/13/2015 14:09:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Membership.OpenAuth.dll">
+      <publishTime>05/13/2015 14:09:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/13/2015 14:09:35</publishTime>
+    </File>
+    <File Include="bin/NHibernate.dll">
+      <publishTime>05/13/2015 14:08:19</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>05/13/2015 14:09:32</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>05/13/2015 14:09:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>05/13/2015 14:09:29</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/13/2015 14:07:44</publishTime>
+    </File>
+    <File Include="GERAL/Css/bootstrap-theme.css">
+      <publishTime>03/16/2015 08:42:08</publishTime>
+    </File>
+    <File Include="GERAL/Css/bootstrap-theme.css.map">
+      <publishTime>03/16/2015 08:42:08</publishTime>
+    </File>
+    <File Include="GERAL/Css/bootstrap-theme.min.css">
+      <publishTime>03/16/2015 08:42:10</publishTime>
+    </File>
+    <File Include="GERAL/Css/bootstrap.css">
+      <publishTime>03/16/2015 08:42:10</publishTime>
+    </File>
+    <File Include="GERAL/Css/bootstrap.css.map">
+      <publishTime>03/16/2015 08:42:08</publishTime>
+    </File>
+    <File Include="GERAL/Css/bootstrap.min.css">
+      <publishTime>03/16/2015 08:42:10</publishTime>
+    </File>
+    <File Include="GERAL/Css/font/genericons-regular-webfont.eot">
+      <publishTime>01/10/2014 10:06:10</publishTime>
+    </File>
+    <File Include="GERAL/Css/font/genericons-regular-webfont.svg">
+      <publishTime>01/10/2014 10:06:10</publishTime>
+    </File>
+    <File Include="GERAL/Css/font/genericons-regular-webfont.ttf">
+      <publishTime>01/10/2014 10:06:12</publishTime>
+    </File>
+    <File Include="GERAL/Css/font/genericons-regular-webfont.woff">
+      <publishTime>01/10/2014 10:06:12</publishTime>
+    </File>
+    <File Include="GERAL/Css/genericons.css">
+      <publishTime>01/10/2014 10:06:14</publishTime>
+    </File>
+    <File Include="GERAL/Js/jquery-1.11.3.js">
+      <publishTime>05/13/2015 20:03:22</publishTime>
+    </File>
+    <File Include="GERAL/Master/Site1.Master">
+      <publishTime>10/26/2017 14:31:52</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/13/2015 14:07:44</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/CadastrarGenero.aspx">
+      <publishTime>10/26/2017 14:19:14</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/CadastrarLivro.aspx">
+      <publishTime>10/26/2017 15:24:11</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/CadastrarUsuario.aspx">
+      <publishTime>10/26/2017 14:33:11</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/Default.aspx">
+      <publishTime>10/27/2017 16:29:31</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/Devolucao.aspx">
+      <publishTime>10/27/2017 12:56:06</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/Estatistica.aspx">
+      <publishTime>06/17/2015 19:38:33</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/FiladeEspera.aspx">
+      <publishTime>10/27/2017 16:51:47</publishTime>
+    </File>
+    <File Include="MODULOS/Principal/Login.aspx">
+      <publishTime>10/25/2017 11:12:38</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/13/2015 14:07:54</publishTime>
+    </File>
+    <File Include="ViewSwitcher.ascx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/24/2017 08:30:05</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

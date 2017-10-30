@@ -1,0 +1,12 @@
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\BOOKS.NUCLEO.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\BOOKS.NUCLEO.pdb
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\FluentNHibernate.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\Iesi.Collections.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\Microsoft.StyleCop.CSharp.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\Microsoft.StyleCop.CSharp.Rules.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\Microsoft.StyleCop.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\Mono.Security.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\bin\Release\NHibernate.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\obj\Release\BOOKS.NUCLEO.csprojResolveAssemblyReference.cache
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\obj\Release\BOOKS.NUCLEO.dll
+C:\Users\Tiago\Desktop\BOOKS\Books\BOOKS.NUCLEO\obj\Release\BOOKS.NUCLEO.pdb

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CABC0EC-E0FB-4453-A1CC-AB4C42A6DD88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BOOKS.NUCLEO</RootNamespace>
+    <AssemblyName>BOOKS.NUCLEO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BOOKS.UTIL">
+      <HintPath>..\BOOKS.UTIL\bin\Debug\BOOKS.UTIL.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.StyleCop">
+      <HintPath>..\Microsoft.StyleCop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.StyleCop.CSharp">
+      <HintPath>..\Microsoft.StyleCop.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.StyleCop.CSharp.Rules">
+      <HintPath>..\Microsoft.StyleCop.CSharp.Rules.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BASE\Aplicacao.cs" />
+    <Compile Include="BASE\booksBase.cs" />
+    <Compile Include="BASE\SessionBase.cs" />
+    <Compile Include="BLL\estatisticaBLL.cs" />
+    <Compile Include="BLL\filaBLL.cs" />
+    <Compile Include="BLL\generoBLL.cs" />
+    <Compile Include="BLL\livroBLL.cs" />
+    <Compile Include="BLL\livroUsuarioBLL.cs" />
+    <Compile Include="BLL\usuarioBLL.cs" />
+    <Compile Include="DAL\estatisticaDAL.cs" />
+    <Compile Include="DAL\filaDAL.cs" />
+    <Compile Include="DAL\generoDAL.cs" />
+    <Compile Include="DAL\livroDAL.cs" />
+    <Compile Include="DAL\livroUsuarioDAL.cs" />
+    <Compile Include="DAL\usuarioDAL.cs" />
+    <Compile Include="DTO\estatisticaDTO.cs" />
+    <Compile Include="DTO\filaDTO.cs" />
+    <Compile Include="DTO\generoDTO.cs" />
+    <Compile Include="DTO\livroDTO.cs" />
+    <Compile Include="DTO\livrousuarioDTO.cs" />
+    <Compile Include="DTO\usuarioDTO.cs" />
+    <Compile Include="MAP\estatisticaMAP.cs" />
+    <Compile Include="MAP\filaMAP.cs" />
+    <Compile Include="MAP\generoMAP.cs" />
+    <Compile Include="MAP\livroMAP.cs" />
+    <Compile Include="MAP\livroUsuarioMAP.cs" />
+    <Compile Include="MAP\usuarioMAP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
