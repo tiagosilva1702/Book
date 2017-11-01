@@ -60,6 +60,34 @@ namespace BOOKS.NUCLEO.DAL
             }
         }
 
+        public void inserir(livrosDTO obj)
+        {
+            using (ISession sessao = SessionBase.AbrirSessao())
+            {
+                using (ITransaction trans = sessao.BeginTransaction())
+                {
+                    sessao.Save(obj);
+                    trans.Commit();
+                }
+            }
+        }
+
+
+        public void inserir(List<filaDTO> obj)
+        {
+            using (ISession sessao = SessionBase.AbrirSessao())
+            {
+                using (ITransaction trans = sessao.BeginTransaction())
+                {
+                    foreach (var item in obj)
+                    {
+                        sessao.Save(item);
+                    }
+                    trans.Commit();
+                }
+            }
+        }
+
         public void atualizar(List<livrosDTO> obj)
         {
             using (ISession sessao = SessionBase.AbrirSessao())

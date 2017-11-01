@@ -91,6 +91,29 @@
                         </tr>
                     </table>
 
+                    <table style="width: 100%;" class="table table-bordered">
+                        <tr>
+                            <td>Fila de Espera
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:GridView runat="server" CssClass="table table-bordered" ID="gdvLivrosFila" AutoGenerateColumns="false"
+                                    AlternatingRowStyle-CssClass="warning">
+                                    <Columns>
+                                        <asp:BoundField HeaderText="NOME" DataField="livroDTO.nome" />
+                                    </Columns>
+                                </asp:GridView>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Button runat="server" ID="Button1" Text="Confirmar Fila" CssClass="btn btn-success" OnClick="btnFinalizarFila" />
+                                <asp:Button runat="server" ID="Button2" Text="Cancelar" CssClass="btn btn-danger" OnClick="btnCancelarAluguel_Click" />
+                            </td>
+                        </tr>
+                    </table>
+
                 </fieldset>
             </td>
             <td style="width: 2%;"></td>

@@ -15,5 +15,9 @@ namespace BOOKS.NUCLEO.DTO
 
         public virtual livroDTO livroDTO { get; set; }
 
+        public virtual DateTime dtInicio { get; set; }
+
+        public virtual DateTime? dtFinal { get; set; }
+
     }
 }

@@ -12,6 +12,8 @@ namespace BOOKS.NUCLEO.MAP
             Id(x => x.identificador).GeneratedBy.Native().Column("IDFILA_LIVRO_USUARIO");
             References(x => x.livroDTO).Column("IDLIVROS");
             References(x => x.usuarioDTO).Column("IDUSUARIO");
+            Map(x => x.dtInicio).Column("DTINICIO");
+            Map(x => x.dtFinal).Column("DTFINAL");
         }
     }
 }

@@ -38,8 +38,13 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
             }
             else if (e.CommandName.Equals("Fila"))
             {
-                alerta.Visible = true;
-                lblMsgError.Text = "Livro já está alugado!";
+                var livro = livroBLL.ObterPorId(Convert.ToInt32(e.CommandArgument.ToString()));
+                filaDTO.livroDTO = livro;
+                filaDTO.usuarioDTO = SessaoUsuarioLogado;
+                filaDTO.dtInicio = DateTime.Now;
+                filaDTO.dtFinal = null;
+                LivrosFila.Add(filaDTO);
+                CarregarGridLivrosFila(LivrosFila);
             }
         }
 
@@ -113,9 +118,20 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
             }
         }
 
+        protected void btnFinalizarFila(object sender, EventArgs e)
+        {
+            if (LivrosFila.Any())
+            {
+                this.SalvarFila(LivrosFila);
+                alerta.Visible = true;
+                lblMsgError.Text = "Prezado " + SessaoUsuarioLogado.nome + " Aluguel efetuado com sucesso, dentro de 2 horas o livro(os) chegará na sua residência";
+                Response.Redirect("Default.aspx");
+            }
+        }
         protected void btnCancelarAluguel_Click(object sender, EventArgs e)
         {
             LivrosAluguel.Clear();
+            LivrosFila.Clear();
             Response.Redirect("Default.aspx");
         }
 
@@ -127,6 +143,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         {
             usuarioDTO = usuarioBLL.ObterPorId(Convert.ToInt32(SessaoUsuarioLogado.identificador));
             LivrosAluguel = new List<livrousuarioDTO>();
+            LivrosFila = new List<filaDTO>();
             var livros = livroBLL.obterTodos().OrderByDescending(x => x.situacao.Equals(true)).ToList();
             this.CarregarGridLivros(livros);
             this.PreencherDadosTela(SessaoUsuarioLogado);
@@ -159,6 +176,19 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
             }
         }
 
+        private void CarregarGridLivrosFila(List<filaDTO> livros)
+        {
+            if (livros.Any())
+            {
+                gdvLivrosFila.DataSource = livros;
+                gdvLivrosFila.DataBind();
+            }
+            else
+            {
+                gdvLivrosFila.DataBind();
+            }
+        }
+
         private void SalvarDados(List<livrousuarioDTO> livros)
         {
             try
@@ -186,6 +216,31 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                 }
 
                 livroBLL.atualizar(livro);
+
+            }
+            catch (Exception err)
+            {
+                throw new Exception(err.ToString());
+            }
+        }
+
+        private void SalvarFila(List<filaDTO> livros)
+        {
+            try
+            {
+                usuarioDTO = usuarioBLL.ObterPorId(Convert.ToInt32(livros.First().usuarioDTO.identificador));
+                List<filaDTO> fila = new List<filaDTO>();
+
+                foreach (var item in livros)
+                {
+                    fila.Add(new filaDTO
+                    {
+                        livroDTO = item.livroDTO,
+                        usuarioDTO = usuarioDTO
+                    });
+                }
+
+                filaBLL.inserir(fila);
 
             }
             catch (Exception err)
@@ -250,10 +305,14 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         usuarioBLL usuarioBLL = new usuarioBLL();
         livroBLL livroBLL = new livroBLL();
         livroUsuarioBLL livroUsuarioBLL = new livroUsuarioBLL();
+        filaBLL filaBLL = new filaBLL();
+
         static List<livrousuarioDTO> LivrosAluguel;
+        static List<filaDTO> LivrosFila;
 
         usuarioDTO usuarioDTO;
         livrousuarioDTO livroUsuario = new livrousuarioDTO();
+        filaDTO filaDTO = new filaDTO();
 
         /// <summary>
         /// Propriedade que guarda o Usuario Logado.

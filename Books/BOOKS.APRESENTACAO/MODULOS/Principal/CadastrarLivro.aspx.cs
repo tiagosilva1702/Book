@@ -18,7 +18,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
         protected void btnCadastrarLivro(object sender, EventArgs e)
         {
-            livroDTO livro = new livroDTO
+            livrosDTO livro = new livrosDTO
             {
                 nome = txtNome.Text,
                 autor = txtAutor.Text,
