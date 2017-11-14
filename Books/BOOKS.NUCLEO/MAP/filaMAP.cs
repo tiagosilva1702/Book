@@ -10,8 +10,8 @@ namespace BOOKS.NUCLEO.MAP
         {
             Table("dbo.FILA_LIVRO_USUARIO");
             Id(x => x.identificador).GeneratedBy.Native().Column("IDFILA_LIVRO_USUARIO");
-            References(x => x.livroDTO).Column("IDLIVROS");
-            References(x => x.usuarioDTO).Column("IDUSUARIO");
+            Map(x => x.idlivro).Column("IDLIVROS");
+            Map(x => x.idusuario).Column("IDUSUARIO");
             Map(x => x.dtInicio).Column("DTINICIO");
             Map(x => x.dtFinal).Column("DTFINAL");
         }

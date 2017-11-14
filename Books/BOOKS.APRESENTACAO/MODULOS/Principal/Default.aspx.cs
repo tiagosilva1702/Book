@@ -228,15 +228,17 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         {
             try
             {
-                usuarioDTO = usuarioBLL.ObterPorId(Convert.ToInt32(livros.First().usuarioDTO.identificador));
+                //usuarioDTO = usuarioBLL.ObterPorId(Convert.ToInt32(livros.First().usuarioDTO.identificador));
                 List<filaDTO> fila = new List<filaDTO>();
 
                 foreach (var item in livros)
                 {
                     fila.Add(new filaDTO
                     {
-                        livroDTO = item.livroDTO,
-                        usuarioDTO = usuarioDTO
+                        idlivro = item.livroDTO.identificador,
+                        idusuario = item.usuarioDTO.identificador,
+                        dtInicio = item.dtInicio,
+                        dtFinal = null
                     });
                 }
 

@@ -23,7 +23,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Fila de Espera
+                            <td>
+                                <a href="FiladeEspera.aspx">Fila de Espera</a>
                             </td>
                         </tr>
                         <tr>
