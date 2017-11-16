@@ -26,26 +26,6 @@
                                 livros alugados.
                             </td>
                         </tr>
-                        <%--<tr>
-                            <td>Ainda pode alugar
-                                <asp:Label runat="server" ID="lblQtdLivroPraAlugar"></asp:Label>
-                                livros.
-                            </td>
-                        </tr>--%>
-                        <%--<tr>
-                            <td>Seu ulltimo aluguel foi de R$<asp:Label runat="server" ID="lblValorUlltimoAluguel"></asp:Label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Você tem R$<asp:Label runat="server" ID="lblDesconto"></asp:Label>
-                                de desconto no próximo aluguel.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Você tem R$<asp:Label runat="server" ID="lblMulta"></asp:Label>
-                                de multa.
-                            </td>
-                        </tr>--%>
                         <tr>
                             <td>
                                 <a href="FiladeEspera.aspx">Fila de Espera</a>
@@ -56,15 +36,10 @@
                                 <a href="Devolucao.aspx">Devoluções</a>
                             </td>
                         </tr>
-                        <%--<tr>
-                            <td>Histórico de Leitura
+                         <tr>
+                            <td>Auditória
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <a href="Estatistica.aspx">Estatísticas dos Livros</a>
-                            </td>
-                        </tr>--%>
                     </table>
 
                     <br />

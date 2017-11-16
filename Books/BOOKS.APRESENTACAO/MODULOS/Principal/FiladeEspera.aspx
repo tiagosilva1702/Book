@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FiladeEspera.aspx.cs" Inherits="BOOKS.APRESENTACAO.MODULOS.Principal.FiladeEspera" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GERAL/Master/Site1.Master" AutoEventWireup="true" CodeBehind="FiladeEspera.aspx.cs" Inherits="BOOKS.APRESENTACAO.MODULOS.Principal.FiladeEspera" %>
 
-<!DOCTYPE html>
-
-<%--<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>--%>
+<asp:content id="Content1" contentplaceholderid="head" runat="server">
+</asp:content>
+<asp:content id="Content2" contentplaceholderid="ContentPlaceHolder1" runat="server">
+    </asp:content>

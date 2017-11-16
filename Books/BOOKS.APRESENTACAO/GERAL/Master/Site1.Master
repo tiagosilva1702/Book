@@ -23,6 +23,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="Login.aspx">BOOKS</a>
+                        <a class="navbar-brand" href="Default.aspx">MENU</a>
                         <a class="navbar-brand" href="CadastrarUsuario.aspx">CADASTRAR USUÁRIO</a>
                         <a class="navbar-brand" href="CadastrarLivro.aspx">CADASTRAR LIVRO</a>
                         <a class="navbar-brand" href="CadastrarGenero.aspx">CADASTRAR GENERO</a>
