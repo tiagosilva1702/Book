@@ -151,7 +151,7 @@ C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\bin\DotNetO
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\obj\Debug\BOOKS.APRESENTACAO.csprojResolveAssemblyReference.cache
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\obj\Debug\BOOKS.APRESENTACAO.csproj.CoreCompileInputs.cache
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\obj\Debug\BOOKS.APRESENTACAO.dll
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\obj\Debug\BOOKS.APRESENTACAO.pdb
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.APRESENTACAO\obj\Debug\BOOKS.APRESENTACAO.csprojResolveAssemblyReference.cache

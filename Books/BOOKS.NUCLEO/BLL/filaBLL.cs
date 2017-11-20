@@ -6,7 +6,7 @@ using BOOKS.NUCLEO.BASE;
 
 namespace BOOKS.NUCLEO.BLL
 {
-   public class filaBLL:livroDAL<livroDTO>
+    public class filaBLL : filaDAL<filaDTO>
     {
     }
 }

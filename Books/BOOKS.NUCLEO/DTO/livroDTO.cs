@@ -12,6 +12,8 @@ namespace BOOKS.NUCLEO.DTO
 
         public virtual bool situacao { get; set; }
 
+        public virtual string descricao_situacao { get; set; }
+
         public virtual string estado { get; set; }
 
         public virtual int idgenero { get; set; }
