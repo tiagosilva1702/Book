@@ -29,10 +29,12 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
             if (e.CommandName.Equals("Devolver"))
             {
                 var livro = livroBLL.ObterPorId(Convert.ToInt32(e.CommandArgument.ToString()));
+                //usuarioDTO = usuarioBLL.ObterPorId(Convert.ToInt32(SessaoUsuarioLogado.identificador));
+                var listDevolucao = livroUsuarioBLL.obterTodos().Where(x => x.livroDTO.identificador == Convert.ToInt32(e.CommandArgument.ToString())
+                                                                        && x.usuarioDTO.identificador == SessaoUsuarioLogado.identificador 
+                                                                        && x.dtFinal is null).FirstOrDefault();
 
-                List<livrosDTO> lv = new List<livrosDTO>();
-
-                lv.Add(new livrosDTO
+                livrosDTO lv = new livrosDTO()
                 {
                     autor = livro.autor,
                     estado = livro.estado,
@@ -41,8 +43,22 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                     isbn = livro.isbn,
                     nome = livro.nome,
                     situacao = false
-                });
 
+                };
+
+                DateTime hoje = DateTime.Now;
+
+                livrousuarioDTO livrousuario = new livrousuarioDTO()
+                {
+                    identificador = listDevolucao.identificador,
+                    dtInicio = listDevolucao.dtInicio,
+                    usuarioDTO = SessaoUsuarioLogado,
+                    livroDTO = livro,
+                    dtFinal = string.Format("{0:dd/MM/yyyy}", hoje)
+                };
+
+                livroUsuarioBLL.atualizar(livrousuario);
+                
                 livroBLL.atualizar(lv);
                 Response.Redirect("Devolucao.aspx");
             }

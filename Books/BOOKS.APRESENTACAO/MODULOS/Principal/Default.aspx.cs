@@ -32,7 +32,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                 livroUsuario.livroDTO = livro;
                 livroUsuario.usuarioDTO = SessaoUsuarioLogado;
                 livroUsuario.dtInicio = string.Format("{0:dd/MM/yyyy}", hoje);
-                livroUsuario.dtFinal = string.Format("{0:dd/MM/yyyy}", hoje.AddDays(5));
+                livroUsuario.dtFinal = null;
                 LivrosAluguel.Add(livroUsuario);
                 CarregarGridLivrosAlugar(LivrosAluguel);
             }
@@ -142,9 +142,14 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         private void InicializarComponentes()
         {
             usuarioDTO = usuarioBLL.ObterPorId(Convert.ToInt32(SessaoUsuarioLogado.identificador));
+            if (usuarioDTO.identificador is null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             LivrosAluguel = new List<livrousuarioDTO>();
             LivrosFila = new List<filaDTO>();
             var livros = livroBLL.obterTodos().OrderByDescending(x => x.situacao.Equals(true)).ToList();
+            var consulta = filaBLL.obterTodos().ToList();
             this.CarregarGridLivros(livros);
             this.PreencherDadosTela(SessaoUsuarioLogado);
         }

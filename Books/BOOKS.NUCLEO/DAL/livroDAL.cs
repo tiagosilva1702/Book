@@ -103,6 +103,18 @@ namespace BOOKS.NUCLEO.DAL
             }
         }
 
+        public void atualizar(livrosDTO obj)
+        {
+            using (ISession sessao = SessionBase.AbrirSessao())
+            {
+                using (ITransaction trans = sessao.BeginTransaction())
+                {
+                    sessao.Update(obj);
+                    trans.Commit();
+                }
+            }
+        }
+
         public void atualizar(T obj)
         {
             using (ISession sessao = SessionBase.AbrirSessao())

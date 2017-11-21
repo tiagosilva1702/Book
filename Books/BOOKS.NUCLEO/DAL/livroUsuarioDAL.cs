@@ -31,10 +31,17 @@ namespace BOOKS.NUCLEO.DAL
         {
             throw new NotImplementedException();
         }
-
+        
         public void atualizar(T obj)
         {
-            throw new NotImplementedException();
+            using (ISession sessao = SessionBase.AbrirSessao())
+            {
+                using (ITransaction trans = sessao.BeginTransaction())
+                {
+                    sessao.Update(obj);
+                    trans.Commit();
+                }
+            }
         }
 
         public void atualizar(List<T> obj)
