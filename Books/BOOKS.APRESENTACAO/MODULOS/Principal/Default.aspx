@@ -96,8 +96,8 @@
             <td style="width: 70%;" valign="top">
                 <fieldset>
                     <legend class="lead" style="text-align: right;"><i class="genericon genericon-book" style="line-height: 30px;"></i>Acervo da Biblioteca</legend>
-                    <asp:TextBox runat="server" ID="txtNomeLivros" CssClass="span2"></asp:TextBox>
-                    <asp:Button runat="server" ID="btnConsultarLivro" Text="Buscar" CssClass="btn btn-inverse" Style="padding: 4px !important" OnClick="btnConsultarLivro_Click" />
+<%--                    <asp:TextBox runat="server" ID="txtNomeLivros" CssClass="span2"></asp:TextBox>
+                    <asp:Button runat="server" ID="btnConsultarLivro" Text="Buscar" CssClass="btn btn-inverse" Style="padding: 4px !important" OnClick="btnConsultarLivro_Click" />--%>
                     <br />
                     <br />
                     <asp:GridView runat="server" CssClass="table table-bordered" ID="gvdLivros" AutoGenerateColumns="false" AllowPaging="True"

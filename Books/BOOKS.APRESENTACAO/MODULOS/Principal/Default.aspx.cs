@@ -69,6 +69,17 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                     alugar.Visible = true;
                     fila.Visible = false;
                 }
+
+                var livrosAlugados = livroUsuarioBLL.obterTodos().Where(x => x.usuarioDTO.identificador == usuarioDTO.identificador && x.dtFinal is null).ToList();
+
+                foreach (var item in livrosAlugados)
+                {
+                    if (item.livroDTO.identificador == livro.identificador)
+                    {
+                        alugar.Visible = false;
+                        fila.Visible = false;
+                    }
+                }
             }
         }
 
@@ -79,34 +90,6 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
             gvdLivros.DataSource = livros;
             gvdLivros.DataBind();
         }
-
-        protected void btnConsultarLivro_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtNomeLivros.Text))
-            {
-                alerta.Visible = false;
-                var consulta = livroBLL.obterTodos()
-                    .Where(n => n.nome.Equals(txtNomeLivros.Text))
-                    .OrderBy(x => x.nome)
-                    .ToList();
-
-                if (consulta.Any())
-                {
-                    CarregarGridLivros(consulta);
-                }
-                else
-                {
-                    alerta.Visible = true;
-                    lblMsgError.Text = txtNomeLivros.Text;
-                }
-            }
-            else
-            {
-                var novaConsulta = livroBLL.obterTodos().OrderBy(x => x.nome).ToList();
-                CarregarGridLivros(novaConsulta);
-            }
-        }
-
         protected void btnFinalizarAluguel_Click(object sender, EventArgs e)
         {
             if (LivrosAluguel.Any())
@@ -258,7 +241,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
         private void PreencherDadosTela(usuarioDTO usuarioDTO)
         {
-            var livrosAlugados = livroUsuarioBLL.obterTodos().Where(x => x.usuarioDTO.identificador == usuarioDTO.identificador).ToList();
+            var livrosAlugados = livroUsuarioBLL.obterTodos().Where(x => x.usuarioDTO.identificador == usuarioDTO.identificador && x.dtFinal is null).ToList();
 
             List<livroDTO> livros = new List<livroDTO>();
 
@@ -270,30 +253,6 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                     livros.Add(livro);
                 }
             }
-
-            //if (!string.IsNullOrEmpty(usuarioDTO.desconto.ToString()))
-            //{
-            //    lblDesconto.Text = usuarioDTO.desconto.ToString();
-            //}
-            //else
-            //{
-            //    lblDesconto.Text = "0";
-            //}
-
-            //if (!string.IsNullOrEmpty(usuarioDTO.juros.ToString()))
-            //{
-            //    lblMulta.Text = usuarioDTO.juros.ToString();
-            //}
-            //else
-            //{
-            //    lblMulta.Text = "0";
-            //}
-
-            //if (!string.IsNullOrEmpty(usuarioDTO.ulltimoAlguel.ToString()))
-            //{
-            //    lblValorUlltimoAluguel.Text = usuarioDTO.ulltimoAlguel.ToString();
-            //}
-
             if (!string.IsNullOrEmpty(usuarioDTO.nome))
             {
                 lblUsuario.Text = usuarioDTO.nome;
@@ -321,9 +280,6 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         livrousuarioDTO livroUsuario = new livrousuarioDTO();
         filaDTO filaDTO = new filaDTO();
 
-        /// <summary>
-        /// Propriedade que guarda o Usuario Logado.
-        /// </summary>
         private usuarioDTO SessaoUsuarioLogado
         {
             get

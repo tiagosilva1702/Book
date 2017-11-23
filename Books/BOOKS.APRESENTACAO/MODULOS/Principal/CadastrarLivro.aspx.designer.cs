@@ -31,15 +31,6 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal {
         protected global::System.Web.UI.WebControls.TextBox txtAutor;
         
         /// <summary>
-        /// DropListEstado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropListEstado;
-        
-        /// <summary>
         /// txtIsbn control.
         /// </summary>
         /// <remarks>
@@ -65,5 +56,32 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAcessar;
+        
+        /// <summary>
+        /// lblUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUsuario;
+        
+        /// <summary>
+        /// gvdLivros control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvdLivros;
+        
+        /// <summary>
+        /// lblQuantidadeAcervo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQuantidadeAcervo;
     }
 }
