@@ -11,11 +11,14 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Carregar DropList genero
             var list = generoBLL.obterTodos();
-
             DropListGenero.DataSource = list;
-
             DropListGenero.DataBind();
+
+            //Carregar livros para serem editados
+            var livros = livroBLL.obterTodos().OrderByDescending(x => x.situacao.Equals(true)).ToList();
+            this.CarregarGridLivros(livros);
 
             LivrosAluguel = new List<livrousuarioDTO>();
             LivrosFila = new List<filaDTO>();
@@ -62,6 +65,8 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
         protected void gvdLivros_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+
+            //TODO: Não esta chegando aqui
             if (e.CommandName.Equals("Alugar"))
             {
                 var livro = livroBLL.ObterPorId(Convert.ToInt32(e.CommandArgument.ToString()));
@@ -97,6 +102,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                 }
             }
         }
+
 
         private usuarioDTO SessaoUsuarioLogado
         {
