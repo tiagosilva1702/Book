@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GERAL/Master/Site1.Master" AutoEventWireup="true" CodeBehind="CadastrarLivro.aspx.cs" Inherits="BOOKS.APRESENTACAO.MODULOS.Principal.CadastrarLivro" %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="true" MasterPageFile="~/GERAL/Master/Site1.Master" AutoEventWireup="true" CodeBehind="CadastrarLivro.aspx.cs" Inherits="BOOKS.APRESENTACAO.MODULOS.Principal.CadastrarLivro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -30,7 +30,7 @@
             <td style="width: 70%;" valign="top">
 
                 <fieldset>
-                    <legend class="lead" style="text-align: right;"><i class="genericon genericon-book" style="line-height: 30px;"></i>Editar</legend>
+                    <legend class="lead" style="text-align: right;"><i class="genericon genericon-book" style="line-height: 30px;"></i>Cadastrar</legend>
                     <div style="margin-bottom: 50px;">
                         <label>Nome:</label>
                         <asp:TextBox ID="txtNome" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
@@ -48,20 +48,18 @@
 
                         <asp:Button ID="btnAcessar" runat="server" CssClass="btn" Text="CADASTRAR" CausesValidation="true" OnClick="btnCadastrarLivro" />
                     </div>
-
-
+                </fieldset>
+                <fieldset>
                     <asp:GridView runat="server" CssClass="table table-bordered" ID="gvdLivros" AutoGenerateColumns="false" AllowPaging="True"
-                        OnRowCommand="gvdLivros_RowCommand" OnRowDataBound="gvdLivros_RowDataBound" AlternatingRowStyle-CssClass="warning" OnPageIndexChanging="gvdLivros_PageIndexChanging">
+                        OnRowCommand="gvdLivros_RowCommand" AlternatingRowStyle-CssClass="warning" OnPageIndexChanging="gvdLivros_PageIndexChanging">
                         <Columns>
                             <asp:BoundField HeaderText="NOME" DataField="nome" />
                             <asp:BoundField HeaderText="AUTOR" DataField="autor" />
                             <asp:BoundField HeaderText="ISBN" DataField="isbn" HeaderStyle-Width="5%" />
                             <asp:BoundField HeaderText="GÊNERO" DataField="generoDTO.descricao" HeaderStyle-Width="5%" />
-                            <asp:BoundField HeaderText="SITUAÇÃO" DataField="situacao" HeaderStyle-Width="5%" />
                             <asp:TemplateField HeaderText="AÇÕES" HeaderStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Button runat="server" ID="btnAlugar" Text="A" CssClass="btn btn-info" CommandArgument='<%# Eval("Identificador")%>' CommandName="Alugar" ToolTip="Alugar livro" />
-                                    <asp:Button runat="server" ID="btnFila" Text="F" CssClass="btn btn-warning" CommandArgument='<%# Eval("Identificador")%>' CommandName="Fila" ToolTip="Fila de espera" />
+                                    <asp:Button runat="server" ID="btnEditar" Text="E" CssClass="btn btn-info" CommandArgument='<%# Eval("Identificador")%>' CommandName="Editar" ToolTip="Editar livro" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -74,8 +72,33 @@
                         registros.
                     </div>
                 </fieldset>
+                <br />
+                <br />
+                <fieldset>
+                    <legend class="lead" style="text-align: right;"><i class="genericon genericon-book" style="line-height: 30px;"></i>Editar</legend>
+                    <div style="margin-bottom: 50px;">
+                        <label style="display: none;">ID:</label>
+                        <asp:TextBox ID="txtEditarIdentificador" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right" Style="display: none;"></asp:TextBox>
 
+                        <label>Nome:</label>
+                        <asp:TextBox ID="txtEditarNome" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
 
+                        <label>Autor:</label>
+                        <asp:TextBox ID="txtEditarAutor" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+
+                        <label>ISBN:</label>
+                        <asp:TextBox ID="txtEditarIsbn" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+
+                        <label>Gênero:</label>
+                        <asp:DropDownList ID="DropEditarListGenero" AppendDataBoundItems="true" DataTextField="descricao" DataValueField="identificador" runat="server">
+                            <asp:ListItem Value="0"> Selecione</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:TextBox ID="txtLastName" runat="server" Style="display: none;"></asp:TextBox>
+
+                        <asp:Button ID="btnEditar" runat="server" CssClass="btn" Text="EDITAR" CausesValidation="true" OnClick="btnEditarLivro" />
+<%--                        <asp:RequiredFieldValidator ID="identificador" runat="server" ControlToValidate="txtLastName" ErrorMessage="Necessário informar o tipo de gênero." ForeColor="Red"> </asp:RequiredFieldValidator>--%>
+                    </div>
+                </fieldset>
             </td>
         </tr>
     </table>

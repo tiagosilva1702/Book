@@ -11,6 +11,14 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                this.InicializarComponentes();
+            }
+        }
+
+        private void InicializarComponentes()
+        {
             // Carregar DropList genero
             var list = generoBLL.obterTodos();
             DropListGenero.DataSource = list;
@@ -22,7 +30,6 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
             LivrosAluguel = new List<livrousuarioDTO>();
             LivrosFila = new List<filaDTO>();
-
         }
 
         protected void btnCadastrarLivro(object sender, EventArgs e)
@@ -67,41 +74,63 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         {
 
             //TODO: Não esta chegando aqui
-            if (e.CommandName.Equals("Alugar"))
+            if (e.CommandName.Equals("Editar"))
             {
                 var livro = livroBLL.ObterPorId(Convert.ToInt32(e.CommandArgument.ToString()));
                 DateTime hoje = DateTime.Now;
-                livroUsuario.livroDTO = livro;
-                livroUsuario.usuarioDTO = SessaoUsuarioLogado;
-                livroUsuario.dtInicio = string.Format("{0:dd/MM/yyyy}", hoje);
-                livroUsuario.dtFinal = null;
-                LivrosAluguel.Add(livroUsuario);
+                txtEditarNome.Text = livro.nome;
+                txtEditarAutor.Text = livro.autor;
+                txtEditarIsbn.Text = livro.isbn;
+                txtEditarIdentificador.Text = livro.identificador.ToString();
+
+                // Carregar DropList genero
+                var list = generoBLL.obterTodos();
+                //identificador.Text = livro.identificador.ToString();
+                DropEditarListGenero.DataSource = list;
+                DropEditarListGenero.DataBind();
             }
         }
 
-        protected void gvdLivros_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void btnEditarLivro(object sender, EventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow)
+            livrosDTO livro = new livrosDTO
             {
-                Button alugar = (Button)e.Row.FindControl("btnAlugar");
-                Button fila = (Button)e.Row.FindControl("btnFila");
+                identificador = Convert.ToInt32(txtEditarIdentificador.Text),
+                nome = txtEditarNome.Text,
+                autor = txtEditarAutor.Text,
+                situacao = true,
+                estado = "Novo",
+                isbn = txtEditarIsbn.Text,
+                idgenero = Convert.ToInt32(DropEditarListGenero.Text)
+            };
 
-                var livro = (livroDTO)e.Row.DataItem;
-
-                if (livro.situacao == true)
-                {
-                    e.Row.Cells[4].Text = "Alugado";
-                    alugar.Visible = false;
-                    fila.Visible = true;
-                }
-                else if (livro.situacao == false)
-                {
-                    e.Row.Cells[4].Text = "Disponível";
-                    alugar.Visible = true;
-                    fila.Visible = false;
-                }
-            }
+            livroBLL.atualizar(livro);
+            Response.Redirect("CadastrarLivro.aspx");
         }
+
+        //protected void gvdLivros_RowDataBound(object sender, GridViewRowEventArgs e)
+        //{
+        //    if (e.Row.RowType == DataControlRowType.DataRow)
+        //    {
+        //        Button alugar = (Button)e.Row.FindControl("btnAlugar");
+        //        Button fila = (Button)e.Row.FindControl("btnFila");
+
+        //        var livro = (livroDTO)e.Row.DataItem;
+
+        //        if (livro.situacao == true)
+        //        {
+        //            e.Row.Cells[4].Text = "Alugado";
+        //            alugar.Visible = false;
+        //            fila.Visible = true;
+        //        }
+        //        else if (livro.situacao == false)
+        //        {
+        //            e.Row.Cells[4].Text = "Disponível";
+        //            alugar.Visible = true;
+        //            fila.Visible = false;
+        //        }
+        //    }
+        //}
 
 
         private usuarioDTO SessaoUsuarioLogado
