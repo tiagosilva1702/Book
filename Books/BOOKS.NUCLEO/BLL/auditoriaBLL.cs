@@ -3,7 +3,7 @@ using BOOKS.NUCLEO.DTO;
 
 namespace BOOKS.NUCLEO.BLL
 {
-    public class usuarioBLL : usuarioDAL<usuarioDTO>
+    public class auditoriaBLL : usuarioDAL<usuarioDTO>
     {
     }
 }

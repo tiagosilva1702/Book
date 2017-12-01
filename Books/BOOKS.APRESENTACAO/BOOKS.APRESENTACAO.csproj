@@ -130,6 +130,7 @@
     <Content Include="GERAL\Css\genericons.css" />
     <Content Include="GERAL\Js\jquery-1.11.3.js" />
     <Content Include="Global.asax" />
+    <Content Include="MODULOS\Principal\Auditoria.aspx" />
     <Content Include="MODULOS\Principal\CadastrarGenero.aspx" />
     <Content Include="MODULOS\Principal\CadastrarLivro.aspx" />
     <Content Include="MODULOS\Principal\CadastrarUsuario.aspx" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Principal\Auditoria.aspx.cs">
+      <DependentUpon>Auditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Principal\Auditoria.aspx.designer.cs">
+      <DependentUpon>Auditoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="MODULOS\Principal\CadastrarGenero.aspx.cs">
       <DependentUpon>CadastrarGenero.aspx</DependentUpon>

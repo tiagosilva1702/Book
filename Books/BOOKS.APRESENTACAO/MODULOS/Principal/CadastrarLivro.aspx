@@ -96,7 +96,6 @@
                         <asp:TextBox ID="txtLastName" runat="server" Style="display: none;"></asp:TextBox>
 
                         <asp:Button ID="btnEditar" runat="server" CssClass="btn" Text="EDITAR" CausesValidation="true" OnClick="btnEditarLivro" />
-<%--                        <asp:RequiredFieldValidator ID="identificador" runat="server" ControlToValidate="txtLastName" ErrorMessage="Necessário informar o tipo de gênero." ForeColor="Red"> </asp:RequiredFieldValidator>--%>
                     </div>
                 </fieldset>
             </td>
