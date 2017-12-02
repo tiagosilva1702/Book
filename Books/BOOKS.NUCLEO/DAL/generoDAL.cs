@@ -15,15 +15,15 @@ namespace BOOKS.NUCLEO.DAL
             using (ISession sessao = SessionBase.AbrirSessao())
             {
                 generoDTO genero = new generoDTO();
-                //var consulta = sessao.QueryOver<livroDTO>()
-                //                .Where(x => x.identificador == id)
-                //                .Take(1)
-                //                .List();
+                var consulta = sessao.QueryOver<generoDTO>()
+                                .Where(x => x.identificador == id)
+                                .Take(1)
+                                .List();
 
-                //if (consulta.Any())
-                //{
-                //    livro = consulta.FirstOrDefault();
-                //}
+                if (consulta.Any())
+                {
+                    genero = consulta.FirstOrDefault();
+                }
 
                 return genero;
             }

@@ -33,15 +33,11 @@
                     <asp:GridView runat="server" CssClass="table table-bordered" ID="gvdLivros" AutoGenerateColumns="false" AllowPaging="True"
                          AlternatingRowStyle-CssClass="warning">
                         <Columns>
-                            <asp:BoundField HeaderText="NOME" DataField="nome" />
+                            <asp:BoundField HeaderText="NOME LIVRO" DataField="nome" />
                             <asp:BoundField HeaderText="AUTOR" DataField="autor" />
                             <asp:BoundField HeaderText="ISBN" DataField="isbn" HeaderStyle-Width="5%" />
-                            <asp:BoundField HeaderText="GÊNERO" DataField="generoDTO.descricao" HeaderStyle-Width="5%" />
-                            <asp:TemplateField HeaderText="AÇÕES" HeaderStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
-                                <ItemTemplate>
-                                    <asp:Button runat="server" ID="btnEditar" Text="E" CssClass="btn btn-info" CommandArgument='<%# Eval("Identificador")%>' CommandName="Editar" ToolTip="Editar livro" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                            <asp:BoundField HeaderText="GÊNERO" DataField="GeneroDTO.descricao" HeaderStyle-Width="5%" />
+                            <asp:BoundField HeaderText="INSTRUÇÃO" DataField="instrucao" HeaderStyle-Width="5%" />
                         </Columns>
                     </asp:GridView>
 

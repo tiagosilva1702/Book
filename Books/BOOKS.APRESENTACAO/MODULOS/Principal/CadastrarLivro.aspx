@@ -22,6 +22,11 @@
                                 <a href="Default.aspx">Principal</a>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <a href="Auditoria.aspx">Auditória</a>
+                            </td>
+                        </tr>
 
                     </table>
                 </fieldset>
@@ -31,22 +36,28 @@
 
                 <fieldset>
                     <legend class="lead" style="text-align: right;"><i class="genericon genericon-book" style="line-height: 30px;"></i>Cadastrar</legend>
-                    <div style="margin-bottom: 50px;">
-                        <label>Nome:</label>
-                        <asp:TextBox ID="txtNome" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
-
-                        <label>Autor:</label>
-                        <asp:TextBox ID="txtAutor" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
-
-                        <label>ISBN:</label>
-                        <asp:TextBox ID="txtIsbn" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
-
-                        <label>Gênero:</label>
-                        <asp:DropDownList ID="DropListGenero" AppendDataBoundItems="true" DataTextField="descricao" DataValueField="identificador" runat="server">
-                            <asp:ListItem Value="0"> Selecione</asp:ListItem>
-                        </asp:DropDownList>
-
-                        <asp:Button ID="btnAcessar" runat="server" CssClass="btn" Text="CADASTRAR" CausesValidation="true" OnClick="btnCadastrarLivro" />
+                    <div style="margin-bottom: 50px;" class="form-group">
+                        <label for="inputEmail3" class="col-md-2 control-label">Nome</label>
+                        <div class="form-group col-sm-10">
+                            <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+                        </div>
+                        <label for="inputEmail3" class="col-md-2 control-label">Autor</label>
+                        <div class="form-group col-sm-10">
+                            <asp:TextBox ID="txtAutor" runat="server" CssClass="form-control" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+                        </div>
+                        <label for="inputEmail3" class="col-md-2 control-label">ISBN</label>
+                        <div class="form-group col-sm-10">
+                            <asp:TextBox ID="txtIsbn" runat="server" CssClass="form-control" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+                        </div>
+                        <label for="inputEmail3" class="col-md-2 control-label">Gênero</label>
+                        <div class="form-group col-sm-10">
+                            <asp:DropDownList ID="DropListGenero" AppendDataBoundItems="true" Class="form-control" DataTextField="descricao" DataValueField="identificador" runat="server">
+                                <asp:ListItem Value="0"> Selecione</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                        <div class="col-lg-offset-10">
+                            <asp:Button ID="btnAcessar" runat="server" CssClass="btn btn-primary" Text="CADASTRAR" CausesValidation="true" OnClick="btnCadastrarLivro" />
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -59,8 +70,9 @@
                             <asp:BoundField HeaderText="GÊNERO" DataField="generoDTO.descricao" HeaderStyle-Width="5%" />
                             <asp:TemplateField HeaderText="AÇÕES" HeaderStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Button runat="server" ID="btnEditar" Text="E" CssClass="btn btn-info" CommandArgument='<%# Eval("Identificador")%>' CommandName="Editar" ToolTip="Editar livro" />
+                                    <asp:Button runat="server" ID="btnEditar"  Text="E" CssClass="btn btn-info" CommandArgument='<%# Eval("Identificador")%>' CommandName="Editar" ToolTip="Editar livro" />
                                 </ItemTemplate>
+                                <%--OnClientClick="javascript: btnEditar();"--%>
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
@@ -74,33 +86,41 @@
                 </fieldset>
                 <br />
                 <br />
-                <fieldset>
+                <fieldset >
+                    <%--<p id="demo"></p>--%>
                     <legend class="lead" style="text-align: right;"><i class="genericon genericon-book" style="line-height: 30px;"></i>Editar</legend>
-                    <div style="margin-bottom: 50px;">
+                    <div style="margin-bottom: 50px;" class="form-group">
+
                         <label style="display: none;">ID:</label>
                         <asp:TextBox ID="txtEditarIdentificador" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right" Style="display: none;"></asp:TextBox>
 
-                        <label>Nome:</label>
-                        <asp:TextBox ID="txtEditarNome" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
-
-                        <label>Autor:</label>
-                        <asp:TextBox ID="txtEditarAutor" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
-
-                        <label>ISBN:</label>
-                        <asp:TextBox ID="txtEditarIsbn" runat="server" CssClass="textarea" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
-
-                        <label>Gênero:</label>
-                        <asp:DropDownList ID="DropEditarListGenero" AppendDataBoundItems="true" DataTextField="descricao" DataValueField="identificador" runat="server">
-                            <asp:ListItem Value="0"> Selecione</asp:ListItem>
-                        </asp:DropDownList>
-                        <asp:TextBox ID="txtLastName" runat="server" Style="display: none;"></asp:TextBox>
-
-                        <asp:Button ID="btnEditar" runat="server" CssClass="btn" Text="EDITAR" CausesValidation="true" OnClick="btnEditarLivro" />
+                        <label for="inputEmail3" class="col-md-2 control-label">Nome</label>
+                        <div class="form-group col-sm-10">
+                            <asp:TextBox ID="txtEditarNome" runat="server" CssClass="form-control" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+                        </div>
+                        <label for="inputEmail3" class="col-md-2 control-label">Autor</label>
+                        <div class="form-group col-sm-10">
+                            <asp:TextBox ID="txtEditarAutor" runat="server" CssClass="form-control" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+                        </div>
+                        <label for="inputEmail3" class="col-md-2 control-label">ISBN</label>
+                        <div class="form-group col-sm-10">
+                            <asp:TextBox ID="txtEditarIsbn" runat="server" CssClass="form-control" data-toggle="tooltip" data-trigger="manual" data-placement="right"></asp:TextBox>
+                        </div>
+                        <label for="inputEmail3" class="col-md-2 control-label">Gênero</label>
+                        <div class="form-group col-sm-10">
+                            <asp:DropDownList ID="DropEditarListGenero" AppendDataBoundItems="true" Class="form-control" DataTextField="descricao" DataValueField="identificador" runat="server">
+                                <asp:ListItem Value="0"> Selecione</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                        <div class="col-lg-offset-10">
+                            <asp:Button ID="btnEditar" runat="server" CssClass="btn btn-primary" Text="EDITAR" CausesValidation="true" OnClick="btnEditarLivro" />
+                        </div>
                     </div>
                 </fieldset>
             </td>
         </tr>
     </table>
+
 
 </asp:Content>
 

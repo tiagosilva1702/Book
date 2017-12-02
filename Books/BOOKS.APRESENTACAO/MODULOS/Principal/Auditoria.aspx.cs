@@ -22,24 +22,27 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
         private void InicializarComponentes()
         {
-            // Carregar DropList genero
-            var list = generoBLL.obterTodos();
-
             //Carregar livros para serem editados
-            var livros = livroBLL.obterTodos().OrderByDescending(x => x.situacao.Equals(true)).ToList();
-            this.CarregarGridLivros(livros);
+            var auditoria = auditoriaBLL.obterTodos().ToList();
+            foreach (var item in auditoria)
+            {
+                var genero = generoBLL.ObterPorId(item.idgenero);
+                item.GeneroDTO = genero;
 
-            LivrosAluguel = new List<livrousuarioDTO>();
-            LivrosFila = new List<filaDTO>();
+            }
+
+            this.CarregarGridLivros(auditoria);
+
+            ListAuditoria = new List<auditoriaDTO>();
         }
 
-        private void CarregarGridLivros(List<livroDTO> livros)
+        private void CarregarGridLivros(List<auditoriaDTO> auditoria)
         {
-            if (livros.Any())
+            if (auditoria.Any())
             {
-                gvdLivros.DataSource = livros;
+                gvdLivros.DataSource = auditoria;
                 gvdLivros.DataBind();
-                lblQuantidadeAcervo.Text = livros.Count().ToString();
+                lblQuantidadeAcervo.Text = auditoria.Count().ToString();
             }
             else
             {
@@ -49,8 +52,8 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
         generoBLL generoBLL = new generoBLL();
         livroBLL livroBLL = new livroBLL();
-        static List<livrousuarioDTO> LivrosAluguel;
-        static List<filaDTO> LivrosFila;
+        auditoriaBLL auditoriaBLL = new auditoriaBLL();
+        static List<auditoriaDTO> ListAuditoria;
 
     }
 }
