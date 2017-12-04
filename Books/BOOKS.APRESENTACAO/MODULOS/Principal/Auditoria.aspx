@@ -14,12 +14,18 @@
                     <table style="width: 100%;" class="table table-bordered">
                         <tr>
                             <td style="font-size: 20px; color: #5bc0de;">Olá,
-                                <asp:Label runat="server" ID="lblUsuario" Text="José"></asp:Label>
+                                <asp:Label runat="server" ID="lblUsuario"></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <a href="Default.aspx">Principal</a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <a href="CadastrarLivro.aspx">Cadastrar Livro</a>
                             </td>
                         </tr>
 

@@ -1,7 +1,15 @@
-﻿
-function btnEditar() {
+﻿//$(document).ready(function () {
 
-    document.getElementById("demo").innerHTML = Date();
+//    //$('#btnEditar').click(function (e) {
 
-}
+//    //    document.getElementById("demo").innerHTML = Date();
+
+//    //});
+//    //$('#modal-site-novo').click(function () {
+//    //    $('.modal-site-novo').show();
+//    //});
+
+
+//});
+
 

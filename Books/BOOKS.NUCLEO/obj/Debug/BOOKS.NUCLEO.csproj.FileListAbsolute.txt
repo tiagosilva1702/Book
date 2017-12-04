@@ -47,7 +47,6 @@ C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.NUCLEO\bin\Debug\NHibern
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.csproj.CoreCompileInputs.cache
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.dll
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.pdb
-C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.csprojResolveAssemblyReference.cache
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\bin\Debug\BOOKS.NUCLEO.dll
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\bin\Debug\BOOKS.NUCLEO.pdb
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\bin\Debug\FluentNHibernate.dll
@@ -61,3 +60,4 @@ C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.c
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.csproj.CoreCompileInputs.cache
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.dll
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.pdb
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.NUCLEO\obj\Debug\BOOKS.NUCLEO.csprojResolveAssemblyReference.cache

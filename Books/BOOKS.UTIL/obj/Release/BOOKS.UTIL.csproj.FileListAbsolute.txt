@@ -1,0 +1,7 @@
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\bin\Release\BOOKS.UTIL.dll
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\bin\Release\BOOKS.UTIL.pdb
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Release\BOOKS.UTIL.Mensagens.resources
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Release\BOOKS.UTIL.csproj.GenerateResource.Cache
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Release\BOOKS.UTIL.csproj.CoreCompileInputs.cache
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Release\BOOKS.UTIL.dll
+C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Release\BOOKS.UTIL.pdb

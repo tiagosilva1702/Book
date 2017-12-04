@@ -89,6 +89,19 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                 DropEditarListGenero.DataSource = list;
                 DropEditarListGenero.DataBind();
             }
+            else if (e.CommandName.Equals("Deletar"))
+            {
+                var livro = livroBLL.ObterPorId(Convert.ToInt32(e.CommandArgument.ToString()));
+                livroBLL.deletar(livro);
+
+                // Carregar DropList genero
+                var list = generoBLL.obterTodos();
+                //identificador.Text = livro.identificador.ToString();
+                DropEditarListGenero.DataSource = list;
+                DropEditarListGenero.DataBind();
+
+                Response.Redirect("CadastrarLivro.aspx");
+            }
         }
 
         protected void btnEditarLivro(object sender, EventArgs e)
