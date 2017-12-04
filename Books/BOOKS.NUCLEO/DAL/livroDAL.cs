@@ -129,7 +129,14 @@ namespace BOOKS.NUCLEO.DAL
 
         public void deletar(T obj)
         {
-            throw new NotImplementedException();
+            using (ISession sessao = SessionBase.AbrirSessao())
+            {
+                using (ITransaction trans = sessao.BeginTransaction())
+                {
+                    sessao.Delete(obj);
+                    trans.Commit();
+                }
+            }
         }
 
         public T detalhar(int id)
