@@ -20,7 +20,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         private void InicializarComponentes()
         {
             // Carregar DropList genero
-            var list = generoBLL.obterTodos();
+            var list = generoBLL.obterTodos().OrderBy(x => x.descricao);
             DropListGenero.DataSource = list;
             DropListGenero.DataBind();
 

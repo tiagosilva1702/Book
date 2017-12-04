@@ -128,7 +128,8 @@
     <Content Include="GERAL\Css\bootstrap.css" />
     <Content Include="GERAL\Css\bootstrap.min.css" />
     <Content Include="GERAL\Css\genericons.css" />
-    <Content Include="GERAL\Js\jquery-1.11.3.js" />
+    <Content Include="GERAL\Js\book.js" />
+    <Content Include="GERAL\Js\jquery-3.2.1.js" />
     <Content Include="Global.asax" />
     <Content Include="MODULOS\Principal\Auditoria.aspx" />
     <Content Include="MODULOS\Principal\CadastrarGenero.aspx" />
@@ -145,12 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GERAL\Master\Site1.Master" />
-    <Content Include="GERAL\Css\bootstrap-theme.css.map" />
-    <Content Include="GERAL\Css\bootstrap.css.map" />
     <Content Include="GERAL\Css\font\genericons-regular-webfont.eot" />
     <Content Include="GERAL\Css\font\genericons-regular-webfont.svg" />
     <Content Include="GERAL\Css\font\genericons-regular-webfont.ttf" />
     <Content Include="GERAL\Css\font\genericons-regular-webfont.woff" />
+    <Content Include="GERAL\Css\bootstrap-theme.css.map" />
+    <Content Include="GERAL\Css\bootstrap.css.map" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

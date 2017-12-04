@@ -17,5 +17,6 @@ namespace BOOKS.NUCLEO.DTO
         public virtual string isbn { get; set; }
         public virtual int idgenero { get; set; }
         public virtual string instrucao { get; set; }
+        public virtual generoDTO GeneroDTO { get; set; }
     }
 }

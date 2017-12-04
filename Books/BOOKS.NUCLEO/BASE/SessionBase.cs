@@ -32,7 +32,8 @@ namespace BOOKS.NUCLEO.BASE
                     return sessao;
                 }
 
-                IPersistenceConfigurer configuraDB = MsSqlConfiguration.MsSql2012.ConnectionString(@"Data Source=sql.servidor.homologacao;Initial Catalog=PreventCataclysmSystems;Persist Security Info=True;User ID=tiago.santos;Password='tiago.santos123*';");
+                //IPersistenceConfigurer configuraDB = MsSqlConfiguration.MsSql2012.ConnectionString(@"Data Source=sql.servidor.homologacao;Initial Catalog=PreventCataclysmSystems;Persist Security Info=True;User ID=tiago.santos;Password='tiago.santos123*';");
+                IPersistenceConfigurer configuraDB = MsSqlConfiguration.MsSql2012.ConnectionString(@"Data Source=TIAGO-PC\SQLSERVERDBA;Initial Catalog=Book;Persist Security Info=True;User ID=tiago;Password='tiago';");
                 var configMap = Fluently.Configure().Database(configuraDB).Mappings(c => c.FluentMappings.AddFromAssemblyOf<BOOKS.NUCLEO.MAP.usuarioMAP>());
                 sessao = configMap.BuildSessionFactory();
                 

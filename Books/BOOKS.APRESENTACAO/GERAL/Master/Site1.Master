@@ -7,12 +7,16 @@
     <title>BOOKS</title>
     <link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../Css/genericons.css" />
+    <script src="../../GERAL/Js/book.js"></script>
+        <script src="../../GERAL/Js/jquery-3.2.1.js"></script>
+
+    <%--<script type="text/javascript" runat="server" src="~/GERAL/Js/jquery-3.2.1.js" ></script>--%>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
 
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="form-horizontal">
         <div class="conteudoTopo">
             <div class="bs-component">
                 <div class="navbar navbar-default">
@@ -44,17 +48,14 @@
             <!--ConteudoCentral-->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-
-            <br />
-            <!--Rodapé-->
-            <div style="border-top: 1px solid #ccc;">
-                <br />
-                BOOKS<br />
-                <asp:Label runat="server" ID="lblDataAtual"></asp:Label>.
-            </div>
-
         </div>
 
     </form>
+    <!--Rodapé-->
+    <div style="border-top: 1px solid #ccc;">
+        <br />
+        BOOKS<br />
+        <asp:Label runat="server" ID="lblDataAtual"></asp:Label>.
+    </div>
 </body>
 </html>

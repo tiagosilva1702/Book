@@ -21,6 +21,7 @@ namespace BOOKS.NUCLEO.MAP
             Map(x => x.estado).Column("ESTADO");
             Map(x => x.isbn).Column("ISBN");
             Map(x => x.idgenero).Column("IDGENERO");
+            References(x => x.GeneroDTO).Column("IDGENERO");
             Map(x => x.instrucao).Column("INSTRUCAO");
         }
     }
