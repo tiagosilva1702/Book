@@ -28,7 +28,6 @@ C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Debug\BOOKS.UTI
 C:\Users\tiago.santos\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Debug\BOOKS.UTIL.pdb
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.UTIL\bin\Debug\BOOKS.UTIL.dll
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.UTIL\bin\Debug\BOOKS.UTIL.pdb
-C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Debug\BOOKS.UTIL.csprojResolveAssemblyReference.cache
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Debug\BOOKS.UTIL.Mensagens.resources
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Debug\BOOKS.UTIL.csproj.GenerateResource.Cache
 C:\Users\Tiago\Documents\GitHub\Book\Books\BOOKS.UTIL\obj\Debug\BOOKS.UTIL.csproj.CoreCompileInputs.cache

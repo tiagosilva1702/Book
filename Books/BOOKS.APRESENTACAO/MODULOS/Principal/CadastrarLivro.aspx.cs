@@ -73,7 +73,6 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
         protected void gvdLivros_RowCommand(object sender, GridViewCommandEventArgs e)
         {
 
-            //TODO: Não esta chegando aqui
             if (e.CommandName.Equals("Editar"))
             {
                 var livro = livroBLL.ObterPorId(Convert.ToInt32(e.CommandArgument.ToString()));

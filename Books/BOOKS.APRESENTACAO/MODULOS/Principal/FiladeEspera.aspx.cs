@@ -150,7 +150,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                     livros.Add(book);
                 }
             }
-            
+
 
             gvdLivros.DataSource = livros.GroupBy(x => x.identificador).Select(c => c.First()).ToList();
             gvdLivros.DataBind();
@@ -204,16 +204,26 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
                     });
 
                     //DateTime hoje = DateTime.Now;
+                    var listfila = filaBLL.obterTodos().Where(x => x.idlivro == item.livroDTO.identificador &&
+                        x.idusuario == item.usuarioDTO.identificador).ToList();
 
-                    fila.Add(new filaDTO
+                    foreach (var itemfila in listfila)
                     {
-                        idlivro = item.livroDTO.identificador,
-                        idusuario = item.usuarioDTO.identificador,
-                        dtFinal = DateTime.Now
-                    });
+                        fila.Add(new filaDTO
+                        {
+                            identificador = itemfila.identificador,
+                            idlivro = item.livroDTO.identificador,
+                            idusuario = item.usuarioDTO.identificador,
+                            dtInicio = itemfila.dtInicio,
+                            dtFinal = DateTime.Now
+                        });
+
+                    }
+
                 }
 
                 livroBLL.atualizar(livro);
+
                 filaBLL.atualizar(fila);
 
             }

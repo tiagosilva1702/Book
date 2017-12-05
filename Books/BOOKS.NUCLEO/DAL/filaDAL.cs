@@ -67,7 +67,17 @@ namespace BOOKS.NUCLEO.DAL
 
         public void atualizar(List<T> obj)
         {
-            throw new NotImplementedException();
+            using (ISession sessao = SessionBase.AbrirSessao())
+            {
+                using (ITransaction trans = sessao.BeginTransaction())
+                {
+                    foreach (var item in obj)
+                    {
+                        sessao.Update(item);
+                    }
+                    trans.Commit();
+                }
+            }
         }
 
         public T detalhar(int id)

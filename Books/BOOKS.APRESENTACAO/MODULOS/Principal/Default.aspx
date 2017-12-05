@@ -38,7 +38,7 @@
                         </tr>
                          <tr>
                             <td>
-                                <a href="Auditoria.aspx">Auditória</a>
+                                <a href="Auditoria.aspx">Auditoria</a>
                             </td>
                         </tr>
                     </table>

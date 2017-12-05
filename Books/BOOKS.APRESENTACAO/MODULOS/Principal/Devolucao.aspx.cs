@@ -103,7 +103,7 @@ namespace BOOKS.APRESENTACAO.MODULOS.Principal
 
         private void CarregarGrid(usuarioDTO usuarioDTO)
         {
-            var consulta = livroUsuarioBLL.obterTodos().Where(x => x.usuarioDTO.identificador == usuarioDTO.identificador).ToList();
+            var consulta = livroUsuarioBLL.obterTodos().Where(x => x.usuarioDTO.identificador == usuarioDTO.identificador && x.dtFinal is null).ToList();
             List<livroDTO> livros = new List<livroDTO>();
 
             foreach (var item in consulta)

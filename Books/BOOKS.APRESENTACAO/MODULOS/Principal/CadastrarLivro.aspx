@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <a href="Auditoria.aspx">Auditória</a>
+                                <a href="Auditoria.aspx">Auditoria</a>
                             </td>
                         </tr>
 
@@ -74,9 +74,9 @@
                                 </ItemTemplate>
                                 <%--OnClientClick="javascript: btnEditar();"--%>
                             </asp:TemplateField>
-                            <asp:TemplateField  HeaderText="DELETAR" HeaderStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
+                            <asp:TemplateField  HeaderText="" HeaderStyle-Width="3%" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:Button runat="server" ID="btnDeletar"  Text="D" CssClass="btn btn-block" CommandArgument='<%# Eval("Identificador")%>' CommandName="Deletar" ToolTip="Deletar livro" />
+                                    <%--<asp:Button runat="server" ID="btnDeletar"  Text="D" CssClass="btn btn-block" CommandArgument='<%# Eval("Identificador")%>' CommandName="Deletar" ToolTip="Deletar livro" />--%>
                                 </ItemTemplate>
                                 <%--OnClientClick="javascript: btnEditar();"--%>
                             </asp:TemplateField>

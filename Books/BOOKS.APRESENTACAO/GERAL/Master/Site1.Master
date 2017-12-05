@@ -30,7 +30,7 @@
                         <a class="navbar-brand" href="Default.aspx">MENU</a>
                         <a class="navbar-brand" href="CadastrarUsuario.aspx">CADASTRAR USUÁRIO</a>
                         <a class="navbar-brand" href="CadastrarLivro.aspx">CADASTRAR LIVRO</a>
-                        <a class="navbar-brand" href="CadastrarGenero.aspx">CADASTRAR GENERO</a>
+                        <a class="navbar-brand" href="CadastrarGenero.aspx">CADASTRAR GÊNERO</a>
                     </div>
                     <div class="navbar-collapse collapse navbar-inverse-collapse">
                         <ul class="nav navbar-nav navbar-right">
